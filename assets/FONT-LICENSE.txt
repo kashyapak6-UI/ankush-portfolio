@@ -1,0 +1,6 @@
+AU Grotesk (au-grotesk-regular.woff2, au-grotesk-bold.woff2) is a renamed-in-CSS,
+Latin-subset WOFF2 build of TeX Gyre Heros (regular + bold), version 2.004,
+by the GUST e-foundry. Source: https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros
+License: GUST Font License (GFL), https://www.gust.org.pl/projects/e-foundry/licenses
+Subset with fonttools pyftsubset (Basic Latin + Latin-1 + common punctuation). Font
+internals are unmodified apart from subsetting; the "AU Grotesk" name is only the CSS family alias.
