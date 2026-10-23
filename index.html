@@ -379,7 +379,7 @@ em{font-style:italic}
       <div class="sphere" id="sphere"><div class="sphere-cam" id="cam"></div></div>
       <h2 class="work-headline" id="workHeadline"><span style="--i:0">I</span> <span style="--i:1">Design</span> <span style="--i:2"><em>What</em></span> <span style="--i:3">Stops</span> <span style="--i:4"><em>Scrolls</em></span></h2>
       <div class="work-top">
-        <span class="eyebrow">Archive · 21 demo projects</span>
+        <span class="eyebrow">Archive · 41 projects</span>
         <button class="grid-toggle liquid-glass" id="gridToggle" type="button" data-cursor="Grid"><svg viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><rect width="6" height="6"/><rect x="8" width="6" height="6"/><rect y="8" width="6" height="6"/><rect x="8" y="8" width="6" height="6"/></svg>View as grid</button>
       </div>
       <div class="bio liquid-glass">
@@ -418,7 +418,7 @@ em{font-style:italic}
       <p class="sub fu" style="--d:.55s">Designs that get noticed, online and on the street.</p>
       <p class="desc fu" style="--d:.7s">Social media creatives, festive campaign kits and large-format hoardings for Punjab brands, from first sketch to print-ready files sized for the vendor.</p>
       <div class="fu" style="--d:.85s">
-        <div class="ctas"><a href="#contact" class="btn btn-green">Book a Call <span class="arr">→</span></a><button type="button" class="btn liquid-glass" data-open-grid data-filter="Hoarding">See Hoardings</button></div>
+        <div class="ctas"><a href="#contact" class="btn btn-green">Book a Call <span class="arr">→</span></a><button type="button" class="btn liquid-glass" data-open-grid data-filter="Poster">See Posters</button></div>
         <p class="trustline">Ludhiana, Punjab · 2 years · 40+ hoardings live.</p>
       </div>
     </div>
@@ -444,7 +444,7 @@ em{font-style:italic}
       <span class="at-line"><span class="fit">Campaigns</span></span>
       <span class="at-line"><span class="fit">Hoardings</span></span>
     </h2>
-    <div class="at-foot"><span>© Portfolio 2026 · Ankush Ghosh</span><span>All projects shown are demo content</span><a href="#home">Back to top ↑</a></div>
+    <div class="at-foot"><span>© Portfolio 2026 · Ankush Ghosh</span><span>Work shown is by Ankush Ghosh · other copy is demo content</span><a href="#home">Back to top ↑</a></div>
   </footer>
 </main>
 
@@ -467,82 +467,53 @@ const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [..
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const root = document.documentElement, body = document.body;
 
-/* ---------- demo data (21 projects) ---------- */
+/* ---------- work data: Ankush's real artwork (41 pieces from his Canva portfolio) ---------- */
 const P = [
- ['Lassi Bar Grand Opening','Social Media · Ludhiana Café','Launch carousel built around one oversized glass and a single offer.','s'],
- ['Monsoon Sale 40% Off','Hoarding · Jalandhar Highway','A 40×20 ft board readable at 80 km/h: one number, one colour.','l'],
- ['Lohri Bonfire Nights','Social Media · Model Town Restaurant','Festive post series with warm type set around the flame.','s'],
- ['Admissions Open 2026','Hoarding · Ferozepur Road','Coaching-institute board with ranker faces replaced by a bold grid.','l'],
- ['Phulkari Edit','Social Media · Ghumar Mandi Boutique','Pattern-led feed tiles that echo the embroidery stitch.','s'],
- ['Chai & Charcha','Social Media · PAU Campus Café','Weekly event post template the client edits themselves.','s'],
- ['Smart Homes, Sector 32','Hoarding · Chandigarh Road','Real-estate board: price, possession date, phone. Nothing else.','l'],
- ['Wedding Season Standee','Standee · Sarabha Nagar Jewellers','A 6 ft vertical standee and matching 9:16 story set.','t'],
- ['Kulcha Week','Social Media · Amritsari Dhaba','Menu-drop posts with hand-drawn steam and stamp type.','s'],
- ['Gym Reopening','Hoarding · Pakhowal Road','High-contrast board with a countdown date the size of a door.','l'],
- ['Diwali Gift Hampers','Social Media · Mall Road Sweets','Box-reveal carousel in saffron and deep plum.','s'],
- ['Cycle City Ludhiana','Social Media · Bicycle Exporter','B2B LinkedIn set celebrating the city’s cycle industry.','s'],
- ['Fresh Basmati Harvest','Hoarding · Moga Bypass','Agri brand board with a single grain as the hero shape.','l'],
- ['Kids Coding Camp','Social Media · BRS Nagar Academy','Playful blocks and big numerals for a summer batch.','s'],
- ['Hosiery Winter Drop','Social Media · Ludhiana Knitwear','Flat-lay inspired posts in wool tones for the winter range.','s'],
- ['Bhangra Night Live','Hoarding · Khanna GT Road','Event board where the date is the dancer.','l'],
- ['Café Menu Revamp','Social Media · Dugri Coffee House','Six-tile grid that reads as one big poster on the profile.','s'],
- ['Solar Subsidy Camp','Hoarding · Rajpura Highway','Government-scheme board simplified to three icons.','l'],
- ['Tractor Mela 2026','Social Media · Sangrur Dealer','Reel cover and post kit for a two-day dealer fair.','s'],
- ['Wedding Planner Launch','Social Media · Civil Lines Studio','Soft serif identity posts for a planner’s first season.','s'],
- ['Clinic Opening Soon','Hoarding · Sidhwan Canal Road','Clean medical board with one trustworthy line of copy.','l'],
-].map(([title, place, note, kind], i) => ({ title, place, note, kind, i }));
-const PAL = [
- ['#ffb703','#fb5607','#1d1d1d','#fff8e7'],['#0b3d91','#ffd60a','#ffffff','#0b3d91'],['#3a0ca3','#f72585','#ffd166','#ffffff'],
- ['#06d6a0','#073b4c','#ffffff','#073b4c'],['#d00000','#ffba08','#fffcf2','#370617'],['#1b4332','#95d5b2','#f1faee','#081c15'],
- ['#f1faee','#e63946','#1d3557','#1d3557'],['#22223b','#c9ada7','#f2e9e4','#f2e9e4'],['#ff006e','#ffbe0b','#ffffff','#2b0016'],
- ['#111111','#39ff14','#ffffff','#ffffff'],['#5f0f40','#fb8b24','#ffe8d6','#ffe8d6'],['#003049','#f77f00','#eae2b7','#eae2b7'],
-];
-
-/* ---------- canvas artworks ---------- */
-function fitFont(ctx, text, maxW, size, weight, family) {
-  let s = size; ctx.font = `${weight} ${s}px ${family}`;
-  while (ctx.measureText(text).width > maxW && s > 8) { s -= 2; ctx.font = `${weight} ${s}px ${family}`; }
-  return s;
-}
-function rnd(seed) { let t = seed + 0x6D2B79F5; return () => { t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+ ["963aacc2b7163575f1a5869b6361f2dc.jpg", 1.0, "Chicken Tikka Pizza in Town", "Social Media · Restaurant", "Food post with the pizza as hero, scattered toppings and hand-lettered headline."],
+ ["df43d749d3e4538131cc0e4df204b6c7.jpg", 0.75, "Super Delicious Cheesy Pizza", "Social Media · Pizza Hut", "Offer post: 50% off and 24/7 home delivery, with the slice breaking the frame."],
+ ["c179a2ebf8f8ec7704c98268a508039d.jpg", 1.0, "Burger Menu Drop", "Social Media · Burger Joint", "Stacked burger bursting out of a phone mock-up over bold vertical type."],
+ ["c2fc2e1153f38ecb1dcb278f3342d57c.jpg", 1.0, "Learn From The Best", "Social Media · Will Academy", "Admissions-style creative with a cut-out student and social icons."],
+ ["1caa2e214a089460b895941eabe7b3f6.jpg", 0.8, "SmartWatch for a Smart Lifestyle", "Social Media · Product Ad", "Soft peach layout with the watch floating in concentric shapes."],
+ ["a889c8098df3a36380dd8a9ef4cebc7f.jpg", 1.0, "Redmi Watch 3", "Social Media · Product Ad", "Black and lime launch post with repeated \"WATCH\" typography."],
+ ["84953f835a6201b580531c21149c04ad.jpg", 0.8, "Lora Stellan, Art Director", "Social Media · Profile Post", "Editorial red profile card with a serif name lock-up."],
+ ["c090140b323b3f39613a87e7f464cd8c.jpg", 0.8, "Limitless Sports", "Social Media · Sports Brand", "Red kinetic poster-post with an athlete mid-stride."],
+ ["a952ad48f91a5de79af695fecead4a81.jpg", 1.0, "Forever Family", "Social Media · Lifestyle", "Monochrome emotional post with a warm accent headline."],
+ ["6a4a602b7501fbd6a299ed6373103692.jpg", 0.8, "Your Emotions Live in a Dream", "Social Media · Fashion", "Split typographic layout with vertical DREAM lettering."],
+ ["6b2d71c5baa77a44c810d38c03549933.jpg", 0.8, "Champion", "Social Media · Esports", "Valorant-style champion graphic with slanted display type."],
+ ["20e269309c6b01b68eea327e54e86962.png", 1.0, "From Concept to Creation", "Social Media · Reelon Air", "Drone-services post for Reelon Air in the brand purple."],
+ ["72214cddcf02d3a511dca5f1e4c5e898.png", 1.0, "Turn Your Passion into a Profession", "Social Media · Reelon Air", "Drone course enrolment post with sectors list and contact strip."],
+ ["6aeb48a4042f4091ae0500e12b4858cc.png", 0.6209, "Drone Training Institute Launch", "Social Media · Reelon Air", "\"Launching soon\" announcement post for the training institute."],
+ ["0c01029b48757c7e736fa44de3666837.png", 1.0, "Ahaa! Premium Tea", "Product Manipulation · Swastik Tea", "Tea pack composited into hill-garden scenery with steaming cups."],
+ ["2647a6f124d7e618c08e4d47444c47ef.png", 1.0, "Pepsi in the Wild", "Product Manipulation · Pepsi", "Can on a mossy rock in a misty forest with flying leaves."],
+ ["3f1ef040456d7ea42bfb13423e6b5c8c.png", 1.0, "Axe Spotlight", "Product Manipulation · Axe", "Deodorant on a plinth under hard light with floating cones."],
+ ["c89ccdefb654909846a59da7ddddd875.png", 2.0, "Botanic Therapy", "Product Manipulation · Garnier", "Shampoo bottle placed into a mountain landscape with birds."],
+ ["f8e8b27930239bb390cb86fd0109ebf2.png", 1.0, "Dew Drama", "Product Manipulation · Lakmé", "Golden studio set with pillars for the face-wash tube."],
+ ["bbc2c5a180c6aeafaa6ca3c6e1371521.png", 1.0, "Shower Gel in the Tropics", "Product Manipulation · Nivea", "Nivea shower gel on an arched stage with palm leaves."],
+ ["eddb9e7d7382d4a582f0c35110061032.png", 1.0, "Bubble Burst", "Product Manipulation · Nivea", "Shower gel floating among glossy teal spheres."],
+ ["667c1c123c36ca9c607dd32bc3b741cd.png", 1.0, "Body Milk Glow", "Product Manipulation · Nivea", "Body-milk bottle on a lit blue pedestal."],
+ ["a3af0527f2e465124c09683c752b35a7.png", 1.0, "Fresh Face Pedestal", "Product Manipulation · Nivea", "Face-wash tube pouring over a soft blue podium."],
+ ["324d7182592c39a8688780efe35db56a.png", 1.0, "Floating Face Wash", "Product Manipulation · Nivea", "Tube balanced on stacked teal discs with bubbles."],
+ ["a782488492465f84126b6f798452ad49.png", 1.0, "Pink Serum Studio", "Product Manipulation · Hair Serum", "Serum bottle on a pink plinth with silk light."],
+ ["57ae0cbe19a83df518a676a51aa6fa47.png", 0.6665, "Spectrum", "Poster · Will Studios", "Glitched dark portrait wrapped in plastic-film textures."],
+ ["68f9afe70403b68727deb341ab6d319f.jpg", 0.8, "Album Art Tribute", "Poster · Will Studios", "Repeated mirrored title type behind a cut-out portrait."],
+ ["6cc790fc0bf9e2841eaa1a335160b864.jpg", 0.8, "Kings Play", "Poster · Will Studios", "Retro hip-hop collage with print textures and stickers."],
+ ["3562083ea97801158f097a5a13603a7f.jpg", 0.9278, "Forever", "Poster · Will Studios", "Album-cover style poster in red and yellow with a sacred-geometry overlay."],
+ ["728dee96fb1bdd5f5bcadb4965d9d918.jpg", 0.7492, "Thought", "Poster · Will Studios", "Neon pink and lime halftone portrait poster."],
+ ["539eac0f8077f244ec1370ff8c599d08.jpg", 0.75, "Wisdom", "Poster · Will Studios", "Pastel floral portrait with vertical serif title."],
+ ["59d248bddaaf525fc6d922387bf432c6.jpg", 0.7037, "Will Studios Editorial", "Poster · Will Studios", "Magazine-cover style fashion poster with light leaks."],
+ ["744a5c821b331c9e57fbd6d7928d5cec.jpg", 0.8, "Just the Right Tool", "Poster · Will Studios", "Vintage paper poster with a smartphone as the hero object."],
+ ["6d0271205a4d5e589026724df6041cad.jpg", 1.0, "Will Studios Collage", "Poster · Will Studios", "Torn-paper black and cream collage."],
+ ["7667082455f2353bc594ccb642883144.jpg", 2.3704, "Will Studios Chrome", "Poster · Will Studios", "Liquid-chrome wordmark banner."],
+ ["38e0cdaf9eb1771cafd571ce075b7e8b.jpg", 1.499, "Will Studios Wordmark", "Poster · Will Studios", "Clean black wordmark on paper texture."],
+ ["16db9a37f76dec99b6ce9a8baa20170c.jpg", 0.8, "Praise the Lord", "T-shirt Print · Streetwear", "Star-framed graphic for a black tee."],
+ ["d9c66b94459ac4f7372aa05b3dfabbe5.jpg", 1.1, "Mugshot 42799", "T-shirt Print · Will Studios", "Gritty mugshot illustration with lightning cracks."],
+ ["e02cc597054337595b2a1c05dbddc896.jpg", 0.7148, "#Walkout", "T-shirt Print · Streetwear", "Halftone portrait with graffiti header."],
+ ["38fac3efad92e39108f52025abbd2c48.jpg", 0.75, "Heart's Desire", "T-shirt Print · Streetwear", "Eye-and-mountain graphic with gothic type."],
+ ["218582bfaf05eca2e2ea3b5388c17ab4.jpg", 1.5003, "The Workspace", "Studio · From the Canva site", "Desk photo used as the backdrop of the Canva site’s contact section."]
+].map(([file, asp, title, place, note], i) => ({ file, asp, title, place, note, i,
+  kind: asp >= 1.4 ? 'l' : asp <= .7 ? 't' : 's',
+  thumb: 'images/thumbs/' + file.replace(/\.\w+$/, '.webp'), full: 'images/canva-site/' + file }));
 const SANS = '"Sora", sans-serif', GROT = '"AU Grotesk", Arial, sans-serif', SERIF = '"Instrument Serif", Georgia, serif';
-function drawArt(p) {
-  const dims = { s: [800, 800], l: [1280, 640], t: [720, 1280] }[p.kind];
-  const [W, H] = dims, c = document.createElement('canvas'); c.width = W; c.height = H;
-  const x = c.getContext('2d'), r = rnd(p.i * 977 + 13), [bg, blk, acc, ink] = PAL[p.i % PAL.length];
-  x.fillStyle = bg; x.fillRect(0, 0, W, H);
-  const style = p.i % 4, words = p.title.toUpperCase().split(' ');
-  x.save();
-  // colour blocks
-  if (style === 0) { x.fillStyle = blk; x.beginPath(); x.moveTo(0, H * .62); x.lineTo(W, H * .38); x.lineTo(W, H); x.lineTo(0, H); x.fill(); x.fillStyle = acc; x.beginPath(); x.arc(W * .78, H * .26, Math.min(W, H) * .17, 0, 7); x.fill(); }
-  else if (style === 1) { x.fillStyle = blk; x.beginPath(); x.arc(W * .5, H * (p.kind === 't' ? .35 : .5), Math.min(W, H) * .42, 0, 7); x.fill(); x.fillStyle = acc; for (let k = 0; k < 9; k++) x.fillRect(0, H - (k + 1) * H * .035, W * (.2 + r() * .6), H * .012); }
-  else if (style === 2) { const n = 6; for (let k = 0; k < n; k++) { x.fillStyle = k % 2 ? blk : acc; x.globalAlpha = .9; x.fillRect(k * W / n, 0, W / n * .5, H); } x.globalAlpha = 1; x.fillStyle = bg; x.fillRect(W * .08, H * .12, W * .84, H * .76); x.fillStyle = blk; x.fillRect(W * .08, H * .12, W * .84, H * .18); }
-  else { x.fillStyle = blk; x.fillRect(0, 0, W * .46, H); x.fillStyle = acc; x.beginPath(); x.arc(W * .23, H * .5, Math.min(W * .3, H * .3), 0, 7); x.fill(); x.fillStyle = bg; x.beginPath(); x.arc(W * .23, H * .5, Math.min(W * .3, H * .3) * .55, 0, 7); x.fill(); }
-  x.restore();
-  // dot texture
-  x.fillStyle = 'rgba(0,0,0,.08)'; for (let yy = 0; yy < H; yy += 14) for (let xx = (yy / 14 % 2) * 7; xx < W; xx += 14) { x.beginPath(); x.arc(xx, yy, 1.4, 0, 7); x.fill(); }
-  // type
-  const pad = Math.min(W, H) * .08, textW = (style === 3 && p.kind === 'l') ? W * .46 : W - pad * 2, tx = (style === 3 && p.kind === 'l') ? W * .5 : pad;
-  const lines = words.length > 2 ? [words.slice(0, Math.ceil(words.length / 2)).join(' '), words.slice(Math.ceil(words.length / 2)).join(' ')] : words;
-  let y = style === 2 ? H * .12 + H * .18 + pad * .6 : pad * 1.1;
-  if (style === 3 && p.kind !== 'l') y = pad;
-  const fam = p.i % 3 === 0 ? GROT : SANS, col = style === 2 ? ink : (style === 0 || style === 1 ? ink : ink);
-  x.textBaseline = 'top';
-  if (style === 2) { x.fillStyle = bg; const s0 = fitFont(x, 'DEMO · ' + p.place.split('·')[0].trim().toUpperCase(), W * .7, H * .06, 700, GROT); x.fillText('DEMO · ' + p.place.split('·')[0].trim().toUpperCase(), W * .12, H * .12 + (H * .18 - s0) / 2); }
-  lines.forEach(L => { const s = fitFont(x, L, textW, (p.kind === 'l' ? H * .2 : H * .14), 800, fam); x.fillStyle = (style === 3 && p.kind !== 'l') ? acc : col; x.fillText(L, tx, y); y += s * .95; });
-  // sub line in serif
-  const sub = p.place.split('·')[1].trim();
-  x.font = `italic ${Math.round(Math.min(W, H) * .055)}px ${SERIF}`; x.fillStyle = col; x.globalAlpha = .9;
-  x.fillText(sub, tx, y + Math.min(W, H) * .02); x.globalAlpha = 1;
-  // badge
-  const bx = W - pad - Math.min(W, H) * .11, by = H - pad - Math.min(W, H) * .11, br = Math.min(W, H) * .11;
-  x.fillStyle = acc; x.beginPath(); x.arc(bx, by, br, 0, 7); x.fill(); x.strokeStyle = blk; x.lineWidth = 4; x.stroke();
-  x.fillStyle = blk; x.textAlign = 'center'; x.textBaseline = 'middle'; fitFont(x, String(p.i + 1).padStart(2, '0'), br * 1.3, br * .9, 800, GROT); x.fillText(String(p.i + 1).padStart(2, '0'), bx, by + 2);
-  // footer strip
-  x.textAlign = 'left'; x.textBaseline = 'alphabetic'; x.fillStyle = 'rgba(0,0,0,.55)'; x.fillRect(0, H - pad * .62, W * .62, pad * .62);
-  x.fillStyle = '#fff'; x.font = `600 ${Math.round(pad * .26)}px ${SANS}`; x.fillText('DEMO ARTWORK · ANKUSH GHOSH · ' + (p.kind === 'l' ? 'HOARDING 40×20 FT' : p.kind === 't' ? 'STANDEE 3×6 FT' : 'POST 1080×1080'), pad * .5, H - pad * .22);
-  return c.toDataURL('image/jpeg', .86);
-}
 function drawAvatar() {
   const c = $('#avatar'), x = c.getContext('2d'), s = c.width;
   const g = x.createLinearGradient(0, 0, s, s); g.addColorStop(0, '#003a66'); g.addColorStop(1, '#000'); x.fillStyle = g; x.fillRect(0, 0, s, s);
@@ -577,20 +548,24 @@ const GA = Math.PI * (3 - Math.sqrt(5));
 function layout() {
   const w = innerWidth, h = innerHeight;
   R = Math.min(w * (w < 641 ? .5 : .46), h * .38, 440);
-  CW = Math.max(R * .34, 64);
-  cards.forEach(c => { const asp = { s: 1, l: 2, t: .5625 }[c.p.kind]; let cw = CW * (c.p.kind === 'l' ? 1.45 : c.p.kind === 't' ? .78 : 1); c.w = cw; c.h = cw / asp; c.el.style.width = cw + 'px'; c.el.style.height = c.h + 'px'; });
+  CW = Math.max(R * .27, 52);
+  cards.forEach(c => { const asp = Math.min(2.2, Math.max(.55, c.p.asp)), cw = CW * Math.sqrt(asp); c.w = cw; c.h = cw / asp; c.el.style.width = cw + 'px'; c.el.style.height = c.h + 'px'; });
 }
+// mix categories around the sphere (deterministic stride through the category-ordered list)
+const ORDER = P.map((_, k) => (k * 17) % P.length);
 function buildSphere(srcs) {
-  const N = P.length;
-  P.forEach((p, i) => {
+  const N = ORDER.length;
+  ORDER.map(k => P[k]).forEach((p, i) => {
     const y = 1 - (i + .5) / N * 2, rr = Math.sqrt(1 - y * y), th = i * GA;
     const el = document.createElement('button'); el.type = 'button'; el.className = 'card'; el.dataset.cursor = 'View'; el.setAttribute('aria-label', `${p.title}, ${p.place}`);
-    const img = new Image(); img.alt = ''; img.src = srcs[i]; img.draggable = false; el.appendChild(img);
+    const img = new Image(); img.alt = ''; img.decoding = 'async'; img.dataset.src = srcs[p.i]; img.draggable = false; el.appendChild(img);
     cam.appendChild(el);
     cards.push({ el, p, v: [Math.cos(th) * rr, y, Math.sin(th) * rr] });
   });
   layout();
 }
+// lazy: sphere thumbnails load only when the work section nears the viewport
+function lazySphere() { new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); cards.forEach(c => { const im = c.el.firstChild; if (im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; } }); }), { rootMargin: '900px 0px' }).observe(work); }
 function renderSphere() {
   const cy = Math.cos(yaw), sy = Math.sin(yaw), cp = Math.cos(pitch), sp = Math.sin(pitch);
   for (const c of cards) {
@@ -633,11 +608,11 @@ sphere.addEventListener('pointermove', e => {
 });
 const endDrag = e => {
   if (!dragging) return; dragging = false; sphere.classList.remove('is-drag');
-  if (moved < 6 && downCard) { const idx = cards.findIndex(c => c.el === downCard); if (idx > -1) openLB(idx, downCard); }
+  if (moved < 6 && downCard) { const c = cards.find(c => c.el === downCard); if (c) openLB(c.p.i, downCard); }
   downCard = null;
 };
 sphere.addEventListener('pointerup', endDrag); sphere.addEventListener('pointercancel', () => { dragging = false; sphere.classList.remove('is-drag'); });
-sphere.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('card')) { e.preventDefault(); const idx = cards.findIndex(c => c.el === e.target); openLB(idx, e.target); } });
+sphere.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('card')) { e.preventDefault(); const c = cards.find(c => c.el === e.target); if (c) openLB(c.p.i, e.target); } });
 
 /* ---------- grid ---------- */
 const grid = $('#grid'), gridList = $('#gridList');
@@ -646,7 +621,7 @@ function buildGrid() {
   P.forEach((p, i) => {
     const f = document.createElement('figure'); f.className = 'grid-item ' + p.kind; f.style.setProperty('--i', i); f.tabIndex = 0; f.dataset.cursor = 'View'; f.dataset.place = p.place;
     f.setAttribute('role', 'button'); f.setAttribute('aria-label', `${p.title}, ${p.place}`);
-    f.innerHTML = `<img alt="" src="${srcs[i]}"><figcaption><b>${p.title}</b><br>${p.place}</figcaption>`;
+    f.innerHTML = `<img alt="${p.title}" src="${srcs[i]}" loading="lazy" decoding="async"><figcaption><b>${p.title}</b><br>${p.place}</figcaption>`;
     const open = () => openLB(i, f.querySelector('img')); f.addEventListener('click', open); f.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
     gridList.appendChild(f); gridItems.push(f);
   });
@@ -668,7 +643,7 @@ $$('[data-open-grid]').forEach(b => b.addEventListener('click', e => { e.prevent
 const lb = $('#lightbox'), lbImg = $('#lbImg');
 let lbIdx = -1, lbSrcEl = null, lbBusy = false;
 function targetRect(i) {
-  const asp = { s: 1, l: 2, t: .5625 }[P[i].kind], mob = innerWidth < 641;
+  const asp = P[i].asp, mob = innerWidth < 641;
   const maxW = innerWidth * (mob ? .92 : .78), maxH = innerHeight * (mob ? .58 : .7);
   let w = maxW, h = w / asp; if (h > maxH) { h = maxH; w = h * asp; }
   return { left: (innerWidth - w) / 2, top: (innerHeight - h) / 2 - (mob ? innerHeight * .07 : innerHeight * .03), width: w, height: h };
@@ -676,12 +651,14 @@ function targetRect(i) {
 function setMeta(i) {
   const p = P[i]; $('#lbPlace').textContent = p.place; $('#lbTitle').textContent = p.title; $('#lbNote').textContent = p.note;
   $('#lbCount').textContent = `${String(lbList.indexOf(i) + 1).padStart(2, '0')} / ${String(lbList.length).padStart(2, '0')}`;
-  lbImg.alt = `${p.title} — demo artwork`;
+  lbImg.alt = `${p.title} — ${p.place}`;
 }
+let lbFullTok = 0;
+function loadFull(i) { const tok = ++lbFullTok, im = new Image(); im.decoding = 'async'; im.onload = () => { if (tok === lbFullTok && lbIdx === i) lbImg.src = P[i].full; }; im.src = P[i].full; }
 function placeImg(r) { lbImg.style.width = r.width + 'px'; lbImg.style.height = r.height + 'px'; lbImg.style.transform = `translate(${r.left}px,${r.top}px)`; }
 function openLB(i, srcEl) {
   if (lbBusy) return; lbBusy = true; lbIdx = i; lbSrcEl = srcEl;
-  lbImg.src = srcs[i]; setMeta(i);
+  lbImg.src = srcs[i]; setMeta(i); loadFull(i);
   const first = srcEl.getBoundingClientRect(), last = targetRect(i);
   lbImg.style.transition = 'none'; placeImg(last);
   const dx = first.left - last.left, dy = first.top - last.top, sxx = first.width / last.width, syy = first.height / last.height;
@@ -709,10 +686,10 @@ function stepLB(d) {
   if (lbIdx < 0 || lbBusy) return;
   const pos = lbList.indexOf(lbIdx), ni = lbList[(pos + d + lbList.length) % lbList.length];
   if (lbSrcEl) lbSrcEl.style.visibility = '';
-  lbIdx = ni; lbSrcEl = grid.classList.contains('is-open') ? gridItems[ni].querySelector('img') : cards[ni].el;
+  lbIdx = ni; lbSrcEl = grid.classList.contains('is-open') ? gridItems[ni].querySelector('img') : cards.find(c => c.p.i === ni).el;
   lbSrcEl.style.visibility = 'hidden';
   lbImg.style.transition = 'opacity .25s'; lbImg.style.opacity = 0;
-  setTimeout(() => { lbImg.src = srcs[ni]; setMeta(ni); lbImg.style.transition = 'none'; placeImg(targetRect(ni)); lbImg.getBoundingClientRect(); lbImg.style.transition = 'opacity .35s'; lbImg.style.opacity = 1; }, reduce ? 0 : 250);
+  setTimeout(() => { lbImg.src = srcs[ni]; setMeta(ni); loadFull(ni); lbImg.style.transition = 'none'; placeImg(targetRect(ni)); lbImg.getBoundingClientRect(); lbImg.style.transition = 'opacity .35s'; lbImg.style.opacity = 1; }, reduce ? 0 : 250);
 }
 $('#lbClose').addEventListener('click', closeLB); $('#lbBackdrop').addEventListener('click', closeLB);
 $('#lbPrev').addEventListener('click', () => stepLB(-1)); $('#lbNext').addEventListener('click', () => stepLB(1));
@@ -792,7 +769,7 @@ function fitHead() {
 /* ---------- boot ---------- */
 let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => { layout(); fitHead(); if (lbIdx > -1) placeImg(targetRect(lbIdx)); }, 120); });
 fontsReady.then(() => {
-  srcs = P.map(drawArt); drawAvatar(); buildSphere(srcs); buildGrid(); fitHead(); renderSphere();
+  srcs = P.map(p => p.thumb); drawAvatar(); buildSphere(srcs); lazySphere(); buildGrid(); fitHead(); renderSphere();
   requestAnimationFrame(loop);
   window.__portfolio = { P, srcs, cards, headline: $('#workHeadline'), ready, openGrid, closeGrid, openLB, closeLB, openMenu, closeMenu };
   setTimeout(ready, reduce ? 0 : 1500);
