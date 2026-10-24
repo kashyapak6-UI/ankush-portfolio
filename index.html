@@ -304,6 +304,54 @@ em{font-style:italic}
   .at-labels{font-size:.6rem;letter-spacing:.08em}
 }
 @media (max-height:560px) and (min-width:641px){.stats{display:none}}
+
+/* ---------- mobile optimisation (touch / small screens) ---------- */
+html{-webkit-tap-highlight-color:transparent}
+@media (pointer:coarse){
+  .grid-toggle,.at-btn{min-height:44px}
+  .at-row a,.at-foot a,.menu-foot a,.colophon a{display:inline-flex;align-items:center;min-height:44px}
+  .lb-btn,.grid-close{width:48px;height:48px}
+  .card{filter:none!important}
+  .grid-item figcaption{opacity:1;padding:.6rem;font-size:.7rem}
+  .lightbox{touch-action:none}
+}
+@media (max-width:900px){
+  .nav{top:calc(10px + env(safe-area-inset-top));width:calc(100% - 2*var(--pad) - env(safe-area-inset-left) - env(safe-area-inset-right))}
+  .lb-controls{top:calc(var(--pad) + env(safe-area-inset-top))}
+  .lb-meta{bottom:calc(var(--pad) + env(safe-area-inset-bottom))}
+  .grid-head{padding-top:calc(1.2rem + env(safe-area-inset-top))}
+  .at-foot{padding-bottom:calc(var(--pad) + env(safe-area-inset-bottom))}
+  .menu{overflow-y:auto;overscroll-behavior:contain}
+}
+@media (max-width:767px){
+  .spline-fallback{background:radial-gradient(70% 55% at 60% 35%,hsl(201 100% 12%) 0%,#03070a 65%,#000 100%)}
+  .spline-fallback::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:22vw 22vw;-webkit-mask-image:radial-gradient(90% 70% at 50% 40%,#000 30%,transparent 100%);mask-image:radial-gradient(90% 70% at 50% 40%,#000 30%,transparent 100%)}
+  .spline-fallback::after{right:-10%;top:12%;width:70vw;height:70vw}
+}
+@media (max-width:640px){
+  .hero{min-height:620px}
+  .hero-sub{font-size:.95rem}
+  .services{min-height:600px}
+  .services h2{font-size:clamp(2.8rem,15vw,4.2rem)}
+  .at-grid{background-image:repeating-linear-gradient(90deg,rgba(241,233,223,.07) 0 1px,transparent 1px calc(100% / 24))}
+  .at-labels{font-size:clamp(.56rem,2.6vw,.7rem)}
+  .at-foot{flex-direction:column;gap:.2rem}
+  .grid-list{grid-auto-rows:44vw}
+  .bio{padding:.6rem .9rem .6rem .6rem}.bio canvas{width:44px;height:44px}.bio p{font-size:.72rem}
+}
+@media (max-width:360px){.trust-pill{font-size:.66rem;padding:0 .6rem}.avatars span{width:26px;height:26px}.hero h1{font-size:clamp(2.5rem,13vw,3rem)}}
+@media (max-height:500px) and (orientation:landscape){
+  .hero{min-height:100svh;height:auto}
+  .hero-inner{justify-content:center;padding:calc(var(--nav-h) + 24px) var(--pad) 1.5rem}
+  .hero h1{font-size:clamp(2.2rem,7vw,3.6rem)}.trust{margin-bottom:.8rem}.hero-sub{margin-top:.8rem}.hero-ctas{margin-top:1rem}
+  .stats{display:none}
+  .bio{display:none}
+  .work-top{top:calc(var(--nav-h) + 14px)}
+  .services{min-height:100svh;height:auto;padding-top:calc(var(--nav-h) + 30px)}.services-content{position:relative}
+  .services h2{font-size:clamp(2.4rem,8vw,3.6rem)}
+  .menu{justify-content:flex-start;padding-top:calc(var(--nav-h) + 24px)}.menu li a{font-size:clamp(1.8rem,9vh,2.6rem)}
+  .lb-meta .note{display:none}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
   .fade-rise,.fu,.reveal,.work-headline > span{opacity:1!important;transform:none!important;filter:none!important}
@@ -526,7 +574,7 @@ let readyDone = false;
 function ready() {
   if (readyDone) return; readyDone = true;
   $('#splash').classList.add('is-done'); body.classList.add('is-ready');
-  const v = $('#heroVideo');
+  const v = $('#heroVideo'); v.muted = true; v.playsInline = true;
   if (!reduce) { const pr = v.play(); if (pr) pr.then(() => v.classList.add('is-playing')).catch(() => {}); }
   setTimeout(countUp, reduce ? 0 : 900);
 }
@@ -608,7 +656,7 @@ sphere.addEventListener('pointermove', e => {
 });
 const endDrag = e => {
   if (!dragging) return; dragging = false; sphere.classList.remove('is-drag');
-  if (moved < 6 && downCard) { const c = cards.find(c => c.el === downCard); if (c) openLB(c.p.i, downCard); }
+  if (moved < (e.pointerType === 'touch' ? 12 : 6) && downCard) { const c = cards.find(c => c.el === downCard); if (c) openLB(c.p.i, downCard); }
   downCard = null;
 };
 sphere.addEventListener('pointerup', endDrag); sphere.addEventListener('pointercancel', () => { dragging = false; sphere.classList.remove('is-drag'); });
@@ -692,6 +740,10 @@ function stepLB(d) {
   setTimeout(() => { lbImg.src = srcs[ni]; setMeta(ni); loadFull(ni); lbImg.style.transition = 'none'; placeImg(targetRect(ni)); lbImg.getBoundingClientRect(); lbImg.style.transition = 'opacity .35s'; lbImg.style.opacity = 1; }, reduce ? 0 : 250);
 }
 $('#lbClose').addEventListener('click', closeLB); $('#lbBackdrop').addEventListener('click', closeLB);
+// touch: swipe left/right to step, swipe down to close
+(() => { let tx = 0, ty = 0, tt = 0; lb.addEventListener('touchstart', e => { const t = e.touches[0]; tx = t.clientX; ty = t.clientY; tt = Date.now(); }, { passive: true });
+  lb.addEventListener('touchend', e => { if (e.target.closest('.lb-controls')) return; const t = e.changedTouches[0], dx = t.clientX - tx, dy = t.clientY - ty; if (Date.now() - tt > 800) return;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.2) stepLB(dx < 0 ? 1 : -1); else if (dy > 80 && dy > Math.abs(dx)) closeLB(); }, { passive: true }); })();
 $('#lbPrev').addEventListener('click', () => stepLB(-1)); $('#lbNext').addEventListener('click', () => stepLB(1));
 
 /* ---------- menu ---------- */
@@ -731,7 +783,7 @@ const hasWebGL = (() => { try { const c = document.createElement('canvas'); retu
 svc.dataset.webgl = hasWebGL ? 'yes' : 'no';
 new IntersectionObserver((es, o) => es.forEach(e => {
   if (!e.isIntersecting) return; o.disconnect();
-  if (!hasWebGL) { svc.dataset.spline = 'fallback'; return; }
+  if (!hasWebGL || innerWidth < 768) { svc.dataset.spline = 'fallback'; return; }
   svc.dataset.spline = 'loading';
   const s = document.createElement('script'); s.type = 'module'; s.src = 'https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js';
   s.onerror = () => { svc.dataset.spline = 'fallback'; };
